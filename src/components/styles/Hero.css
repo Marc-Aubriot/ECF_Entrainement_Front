@@ -6,7 +6,9 @@
     position: absolute;
     font-family: 'Roboto', sans-serif;
     color: #EEEEEE;
-    font-size: 29px;
+    font-size: 42px;
+    width: 80vw;
+    margin-left: 5vw;
 
     /* stroke hero text */
     -webkit-text-stroke: 1px black;
@@ -24,4 +26,18 @@
 
     /*crop img*/
     object-fit: cover; 
+}
+
+/* tablet */
+@media (min-width: 850px) and (orientation: landscape)  {
+    .heroTitle {
+        margin-left: 15vw;
+    }
+}
+
+/* desktop */
+@media (min-width: 1250px) and (orientation: landscape)  {
+    .heroTitle {
+        margin-left: 25vw;
+    }
 }
