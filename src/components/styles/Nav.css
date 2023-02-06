@@ -1,47 +1,78 @@
+/* Hamburger / close BTN */
 .hamburgerBtn {
     background-color: #47555E;
     border: none;
     position: absolute;
     right: 0;
-    width: 100px;
-    height: 100px;
+    width: 20vw;
+    height: 9vh;
 }
+
 .hamburgerImg {
     filter: invert(99%) sepia(3%) saturate(909%) hue-rotate(196deg) brightness(116%) contrast(87%);
     width: 100%;
     height: 100%;
 }
-.navList {
-    border: 1px solid red;
-}
+
+
+/*.navList {
+}*/
+
+/* navlist dropdown */
 .menuNav {
     list-style: none;
-    position: fixed;
+    position: absolute;
     background: #9CA4A4;  
     visibility: hidden;
     top: 10vh;
     left: 0;
-    height: 100%;
     width: 0%;
-    overflow: hidden;
     max-width: 100%;
     z-index: 9;
   }
+
   .menuNav.showMenu {
+    margin: 0;
+    padding: 0;
     visibility: visible;
     width: 100%;
+    height: 90vh;
+    text-align: center;
   }
+
+  /* navlist list */
 .list {
     /*color: #EEEEEE;*/
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
+    font-size: 36px;
+    margin-top: 4rem;
+    margin-left: auto;
 }
-a { color: #EEEEEE; }
-a:link { text-decoration: none; }
-a:visited { text-decoration: none; }
-a:hover { text-decoration: none; }
-a:active { text-decoration: none; }
+
+/* link anchor */
+a { 
+    color: #EEEEEE; 
+}
+
+a:link, a:visited, a:hover, a:active { 
+    text-decoration: none; 
+}
+
+
 .active-link {
     color: orangered;
     text-decoration: underline;
+}
+
+/* social media icon */
+.socialMediaList {
+    margin-top: 4rem;
+}
+
+.socialMediaImg {
+    padding: 3px;
+    width: 60px;
+    height: 60px;
+    filter: invert(99%) sepia(3%) saturate(909%) hue-rotate(196deg) brightness(116%) contrast(87%);
 }

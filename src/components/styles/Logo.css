@@ -1,6 +1,9 @@
 .logoWrapper {
+    width: 25vw;
+    height:10vh;
     width: 100px;
     height: 100px;
+    margin-top: -0.5rem;
 }
 
 .logoImg{

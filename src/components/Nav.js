@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import './styles/Nav.css';
 import hamburgerImg from '../ressources/list.svg';
 import closeImg from '../ressources/x.svg';
+import socialMediaImg1 from '../ressources/instagram.svg';
+import socialMediaImg2 from '../ressources/facebook.svg'
 import { NavLink } from "react-router-dom";
 
 const Nav = () => {
@@ -53,7 +55,7 @@ const Nav = () => {
                 )}
             </button>
 
-            {/* Navlist + Navlink */}
+            {/* Navlist + Navlink + Social Media*/}
             <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
                 {links.map(link => {
                     return (
@@ -69,6 +71,17 @@ const Nav = () => {
                         </li>
                     )
                 })}
+
+                {/* Social Media List + Icons */}
+                <li className="socialMediaList">
+                    <a href="https://www.facebook.com/">
+                        <img src={socialMediaImg2} className="socialMediaImg" target="_blank" />
+                    </a>
+                    <a href="https://www.instagram.com/">
+                        <img src={socialMediaImg1} className="socialMediaImg" target="_blank" />
+                    </a>
+                </li>
+                
             </ul>
 
         </nav>
