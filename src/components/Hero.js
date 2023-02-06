@@ -4,7 +4,7 @@ import heroImg from '../ressources/cover-dark-high.jpg';
 
 const Hero = () => {
     return (
-        <>
+        <section>
             <h1 className="heroTitle">Charles Cantin Photographe</h1>
             <div className="heroImgWrapper">
                 <img
@@ -14,7 +14,7 @@ const Hero = () => {
                     className="heroImg"
                 />
             </div>
-        </>
+        </section>
     );
 }
 
