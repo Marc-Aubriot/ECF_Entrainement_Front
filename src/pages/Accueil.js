@@ -1,5 +1,5 @@
 import React from "react";
-import '../components/styles/Main.css';
+//import '../components/styles/Main.css';
 import Hero from '../components/Hero.js';
 
 const Accueil = () => {

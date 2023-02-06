@@ -2,4 +2,5 @@
     display: flex;
     background-color: #47555E;
     height: 10vh;
+    overflow: hidden;
 }

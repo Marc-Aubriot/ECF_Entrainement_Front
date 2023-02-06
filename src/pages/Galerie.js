@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 const Galerie = () => {
     return (
-        <>
-            <h1>Galerie TEST</h1>
-        </>
+        <main className="mainStyles">
+            <h1>Galerie Test</h1>
+        </main>
     );
 }
 
