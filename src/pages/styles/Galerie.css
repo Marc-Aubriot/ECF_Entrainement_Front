@@ -1,0 +1,14 @@
+.gallery {
+    text-align: center;
+    
+}
+
+.pics {
+    /* crop the image */
+    overflow: hidden;
+    object-fit: cover;
+
+    width: 325px;
+    height: 200px;
+    margin-bottom: 2vh;
+}

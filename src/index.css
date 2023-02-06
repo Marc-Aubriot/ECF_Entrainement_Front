@@ -1,9 +1,17 @@
 html, body, main, section {
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
 .mainStyles {
     background-color: #EEEEEE;
+}
+
+.sectionTitle {
+    font-family: 'Roboto', sans-serif;
+    color: #6C60A8;
+    margin: 0;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    text-align: center;
 }
