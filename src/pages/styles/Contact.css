@@ -1,0 +1,54 @@
+.contact {
+    display: block;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 5px;
+    height: 59vh;
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+    background-color: #44645C;
+}
+.formWrapper {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.formArea {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.emailArea {
+    margin: 0;
+    padding: 0;
+}
+.emailInputArea {
+    margin: 0;
+    padding: 0;
+    height: 6%;
+    width: 95%;
+    margin-bottom: 2vh;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.formTextArea {
+    margin: 0;
+    padding: 0;
+    height: 80%;
+    width: 95%;
+    margin-bottom: 2vh;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.submitBtn {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(49, 131, 255);
+    color: white;
+    margin-left: 33%;
+    width: 33%;
+    height: 5%;
+}
