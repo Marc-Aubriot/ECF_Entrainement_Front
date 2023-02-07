@@ -15,7 +15,7 @@ import pic_11 from '../ressources/photos_galerie/mariage2-desktop.jpg';
 import Footer from '../components/Footer.js';
 
 const Galerie = () => {
-    const pics = [pic_0,pic_1,pic_2,pic_3,pic_4,pic_5,pic_6,pic_7,pic_8,pic_9,pic_10,pic_11]
+    const pics = [pic_0,pic_1,pic_2,pic_3,pic_4,pic_5,pic_6,pic_7,pic_8,pic_9,pic_10,pic_11];
 
     return (
         <main className="mainStyles">
