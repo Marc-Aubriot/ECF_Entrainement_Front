@@ -16,16 +16,21 @@
     overflow: hidden;
 }
 .cardBottom {
-    height: 100px;
+    height: 130px;
 }
 .cardTitle {
     position: absolute;
     text-align: center;
-    left: 35%;
-    color: #eeeeee;
+    font-size: 28px;
+    left: 2.5%;
+    width: 95%;
     font-family: 'Roboto', sans-serif;
+    -webkit-text-stroke: 0.5px white;
+    color: black;
 }
 .cardPrice {
+    margin: 0;
+    padding-top: 1vh;
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }

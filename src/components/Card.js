@@ -14,7 +14,7 @@ function Card(props) {
                     className="cardImg"
                 />
             </div>
-            <div className="cardBottom">
+            <div className="cardBottom" style={{backgroundColor: [props.bgcolor]}} >
                 <h3 className="cardPrice">{props.price}</h3>
                 <p className="cardDesc">{props.desc}</p>
             </div>
