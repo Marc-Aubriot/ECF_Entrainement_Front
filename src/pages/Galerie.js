@@ -19,50 +19,62 @@ const Galerie = () => {
         {
             photo: pic_0,
             categorie: "bébé",
+            title: "bébé1",
         },
         {
             photo: pic_1,
             categorie: "bâptème",
+            title: "bâptème1",
         },
         {
             photo: pic_2,
             categorie: "mariage",
+            title: "mariage1",
         },
         {
             photo: pic_3,
             categorie: "grossesse",
+            title: "grossesse1",
         },
         {
             photo: pic_4,
             categorie: "couple",
+            title: "couple1",
         },
         {
             photo: pic_5,
             categorie: "famille",
+            title: "famille1",
         },
         {
             photo: pic_6,
             categorie: "bâptème",
+            title: "bâptème2",
         },
         {
             photo: pic_7,
             categorie: "bébé",
+            title: "bébé2",
         },
         {
             photo: pic_8,
             categorie: "couple",
+            title: "couple2",
         },
         {
             photo: pic_9,
             categorie: "famille",
+            title: "famille2",
         },
         {
             photo: pic_10,
             categorie: "grossesse",
+            title: "grossesse2",
         },
         {
             photo: pic_11,
             categorie: "mariage",
+            title: "mariage2",
         },
     ];
 
@@ -92,16 +104,25 @@ const Galerie = () => {
 
     function populateGalery() {
         if ( cat1 === true || cat2 === true || cat3 === true || cat4 === true || cat5 === true || cat6 === true ) {
-            //créer un array photo copiant l'original et filtrant uniquement les catégories sélectionnées
 
+            //créer un array photo copiant l'original et filtrant uniquement les catégories sélectionnées
+            const tempArray = [];
+            picsList.forEach(element => { 
+                if ( cat1 === true && element.categorie === "bâptème" ) { tempArray.push(element); }
+                if ( cat2 === true && element.categorie === "mariage" ) { tempArray.push(element); }
+                if ( cat3 === true && element.categorie === "bébé" ) { tempArray.push(element); }
+                if ( cat4 === true && element.categorie === "famille" ) { tempArray.push(element); }
+                if ( cat5 === true && element.categorie === "grossesse" ) { tempArray.push(element); }
+                if ( cat6 === true && element.categorie === "couple" ) { tempArray.push(element); }
+            });
 
             return ( //retourne l'array filtré avec les catégories sélectionnées
-                Object.keys(picsList).map((item, i) => (
+                Object.keys(tempArray).map((item, i) => (
                     <img 
-                        src={picsList[item].photo}
+                        src={tempArray[item].photo}
                         className="pics"
-                        alt="photo"
-                        title={`photo`}
+                        alt="photo de Charles Cantin"
+                        title={`photo ${tempArray[item].title}`}
                     />
                 ))
             ) 
@@ -111,8 +132,8 @@ const Galerie = () => {
                     <img 
                         src={picsList[item].photo}
                         className="pics"
-                        alt="photo"
-                        title={`photo`}
+                        alt="photo de Charles Cantin"
+                        title={`photo ${picsList[item].title}`}
                     />
                 ))
             ) 
