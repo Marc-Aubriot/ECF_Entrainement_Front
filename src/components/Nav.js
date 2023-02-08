@@ -1,18 +1,27 @@
+/* imports reacts */
 import React, { useState } from "react";
-import './styles/Nav.css';
-import hamburgerImg from '../ressources/list.svg';
-import closeImg from '../ressources/x.svg';
-import socialMediaImg1 from '../ressources/instagram.svg';
-import socialMediaImg2 from '../ressources/facebook.svg'
 import { NavLink } from "react-router-dom";
 
+/* imports composants et styles */
+import './styles/Nav.css';
+
+/* imports ressources */
+import socialMediaImg1 from '../ressources/instagram.svg';
+import socialMediaImg2 from '../ressources/facebook.svg'
+import hamburgerImg from '../ressources/list.svg';
+import closeImg from '../ressources/x.svg';
+
+
+
+/* composant: barre de Nagivation */
 const Nav = () => {
+
     //hooks et handlers pour menu
     const [navbarOpen, setNavbarOpen] = useState(false);
     const handleToggle = () => { setNavbarOpen(prev => !prev) }
     const closeMenu = () => { setNavbarOpen(false) }
 
-    // List de navigation du menu
+    // liste de navigation du menu
     const links = [
         {
             id: 1,

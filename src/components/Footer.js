@@ -1,13 +1,21 @@
+/* imports reacts */
 import React from "react";
-import './styles/Footer.css';
-import Logo from "./Logo.js";
-import Copyrights from "./Copyrights.js";
 
+/* imports composants et styles */
+import Logo from "./Logo.js";
+import './styles/Footer.css';
+
+
+/* composant: Footer */
 const Footer = () => {
+
     return (
         <footer className="footerStyles">
+
             <Logo />
-            <Copyrights />
+
+            <p className="copyrightsText">© 2023 Charles Cantin</p>
+
         </footer>
     );
 }

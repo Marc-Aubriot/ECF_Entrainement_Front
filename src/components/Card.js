@@ -1,8 +1,13 @@
+/* imports reacts */
 import React from "react";
-import './styles/Card.css';
-import image from '../ressources/photo_presta/pourmoi-desktop.jpg';
 
+/* imports composants et styles */
+import './styles/Card.css';
+
+
+/* composant: Card des prestations */
 function Card(props) {
+
     return (
         <div className="cardWrapper">
             <div className="cardTop">

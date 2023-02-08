@@ -1,5 +1,11 @@
+/* imports reacts */
 import React, { useState } from "react";
+
+/* imports composants et styles */
+import Footer from '../components/Footer.js';
 import './styles/Galerie.css';
+
+/* imports ressources */
 import pic_0 from '../ressources/photos_galerie/famille1-desktop.jpg';
 import pic_1 from '../ressources/photos_galerie/bébé1-desktop.jpg';
 import pic_2 from '../ressources/photos_galerie/bapteme1-desktop.jpg';
@@ -12,39 +18,42 @@ import pic_8 from '../ressources/photos_galerie/couple2-desktop.jpg';
 import pic_9 from '../ressources/photos_galerie/famille2-desktop.jpg';
 import pic_10 from '../ressources/photos_galerie/grossesse2-desktop.jpg';
 import pic_11 from '../ressources/photos_galerie/mariage2-desktop.jpg';
-import Footer from '../components/Footer.js';
 
-const Galerie = () => {
+
+/* composant: Page Galerie */
+const Galerie = () => { 
+
+    /* photo data */
     const picsList = [
         {
             photo: pic_0,
+            categorie: "famille",
+            title: "famille1",
+        },
+        {
+            photo: pic_1,
             categorie: "bébé",
             title: "bébé1",
         },
         {
-            photo: pic_1,
+            photo: pic_2,
             categorie: "bâptème",
             title: "bâptème1",
         },
         {
-            photo: pic_2,
+            photo: pic_3,
             categorie: "mariage",
             title: "mariage1",
         },
         {
-            photo: pic_3,
+            photo: pic_4,
             categorie: "grossesse",
             title: "grossesse1",
         },
         {
-            photo: pic_4,
+            photo: pic_5,
             categorie: "couple",
             title: "couple1",
-        },
-        {
-            photo: pic_5,
-            categorie: "famille",
-            title: "famille1",
         },
         {
             photo: pic_6,
@@ -102,6 +111,7 @@ const Galerie = () => {
     const [cat6, setFilterCat6] = useState(false)
     const toggleCat6 = () => { setFilterCat6(prev => !prev) }
 
+    /* rempli la galerie avec les images, prend en compte le choix des filtres */
     function populateGalery() {
         if ( cat1 === true || cat2 === true || cat3 === true || cat4 === true || cat5 === true || cat6 === true ) {
 

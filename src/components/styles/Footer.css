@@ -3,3 +3,9 @@
     background-color: #47555E;
     overflow: hidden;
 }
+
+.copyrightsText {
+    font-family: 'Roboto', sans-serif;
+    color: #EEEEEE;
+    padding-top: 3vh;
+}
