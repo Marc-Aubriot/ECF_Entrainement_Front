@@ -19,7 +19,8 @@
     height: 130px;
 }
 .cardTitle {
-    position: absolute;
+    position: relative;
+    top: -100%;
     text-align: center;
     font-size: 28px;
     left: 2.5%;

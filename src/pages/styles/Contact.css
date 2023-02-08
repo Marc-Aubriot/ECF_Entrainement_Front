@@ -1,14 +1,16 @@
 .contact {
     display: block;
-    margin: 2rem;
     padding: 2rem;
     border-radius: 5px;
     height: 59vh;
-    margin-top: 1vh;
-    margin-bottom: 3vh;
+    width: 300px;
     background-color: #44645C;
+    margin: 0 auto;
+    margin-top: 1vh;
+    margin-bottom: 4vh;
 }
 .formWrapper {
+    text-align: center;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -51,4 +53,17 @@
     margin-left: 33%;
     width: 33%;
     height: 5%;
+}
+
+/* tablet */
+@media (min-width: 750px) {
+    .contact {
+        width: 600px;
+    }
+}
+/* desktop */
+@media (min-width: 1200px) {
+    .contact {
+        width: 800px;
+    }
 }

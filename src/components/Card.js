@@ -11,13 +11,14 @@ function Card(props) {
     return (
         <div className="cardWrapper">
             <div className="cardTop">
-                <h2 className="cardTitle">{props.title}</h2>
+               
                 <img
                     src={props.image}
                     alt=""
                     title=""
                     className="cardImg"
                 />
+                <h2 className="cardTitle">{props.title}</h2>
             </div>
             <div className="cardBottom" style={{backgroundColor: [props.bgcolor]}} >
                 <h3 className="cardPrice">{props.price}</h3>

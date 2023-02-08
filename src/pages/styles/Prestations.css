@@ -1,3 +1,17 @@
-.prestations {
-    
+/* tablet */
+@media (min-width: 700px) {
+    .prestations {
+        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* desktop */
+@media (min-width: 1200px) {
+    .prestations {
+        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
