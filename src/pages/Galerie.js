@@ -15,24 +15,146 @@ import pic_11 from '../ressources/photos_galerie/mariage2-desktop.jpg';
 import Footer from '../components/Footer.js';
 
 const Galerie = () => {
-    const pics = [pic_0,pic_1,pic_2,pic_3,pic_4,pic_5,pic_6,pic_7,pic_8,pic_9,pic_10,pic_11];
+    const picsList = [
+        {
+            photo: pic_0,
+            categorie: "bébé",
+        },
+        {
+            photo: pic_1,
+            categorie: "bâptème",
+        },
+        {
+            photo: pic_2,
+            categorie: "mariage",
+        },
+        {
+            photo: pic_3,
+            categorie: "grossesse",
+        },
+        {
+            photo: pic_4,
+            categorie: "couple",
+        },
+        {
+            photo: pic_5,
+            categorie: "famille",
+        },
+        {
+            photo: pic_6,
+            categorie: "bâptème",
+        },
+        {
+            photo: pic_7,
+            categorie: "bébé",
+        },
+        {
+            photo: pic_8,
+            categorie: "couple",
+        },
+        {
+            photo: pic_9,
+            categorie: "famille",
+        },
+        {
+            photo: pic_10,
+            categorie: "grossesse",
+        },
+        {
+            photo: pic_11,
+            categorie: "mariage",
+        },
+    ];
+
+    /* dropdown hooks */
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const handleToggle = () => { setDropdownOpen(prev => !prev) }
+    //const closeDropdown = () => { setDropdownOpen(false) }
+
+    /* category + hooks */
+    const [cat1, setFilterCat1] = useState(false)
+    const toggleCat1 = () => { setFilterCat1(prev => !prev) }
+
+    const [cat2, setFilterCat2] = useState(false)
+    const toggleCat2 = () => { setFilterCat2(prev => !prev) }
+
+    const [cat3, setFilterCat3] = useState(false)
+    const toggleCat3 = () => { setFilterCat3(prev => !prev) }
+
+    const [cat4, setFilterCat4] = useState(false)
+    const toggleCat4 = () => { setFilterCat4(prev => !prev) }
+
+    const [cat5, setFilterCat5] = useState(false)
+    const toggleCat5 = () => { setFilterCat5(prev => !prev) }
+
+    const [cat6, setFilterCat6] = useState(false)
+    const toggleCat6 = () => { setFilterCat6(prev => !prev) }
+
+    function populateGalery() {
+        if ( cat1 === true || cat2 === true || cat3 === true || cat4 === true || cat5 === true || cat6 === true ) {
+            //créer un array photo copiant l'original et filtrant uniquement les catégories sélectionnées
+
+
+            return ( //retourne l'array filtré avec les catégories sélectionnées
+                Object.keys(picsList).map((item, i) => (
+                    <img 
+                        src={picsList[item].photo}
+                        className="pics"
+                        alt="photo"
+                        title={`photo`}
+                    />
+                ))
+            ) 
+        } else { //retourne tout l'array photo
+            return (
+                Object.keys(picsList).map((item, i) => (
+                    <img 
+                        src={picsList[item].photo}
+                        className="pics"
+                        alt="photo"
+                        title={`photo`}
+                    />
+                ))
+            ) 
+        }
+    }
 
     return (
         <main className="mainStyles">
             <h1 className="sectionTitle">Galerie</h1>
 
+            <div className="dropdownContainer">
+
+                <button className="dropdownToggle" onClick={handleToggle}>Filtre</button>
+
+                <ul className={`dropdownList ${dropdownOpen ? " showDropdown" : ""}`}>
+
+                    <li className="dropdownListItem">
+                        <button className={`categoryToggleBtn ${cat1 ? " showActiveFilter" : ""}`} onClick={ toggleCat1 } >Bâptème</button>
+                    </li>
+                    <li className="dropdownListItem">
+                        <button className={`categoryToggleBtn ${cat2 ? " showActiveFilter" : ""}`} onClick={ toggleCat2 } >Mariage</button>
+                    </li>
+                    <li className="dropdownListItem">
+                        <button className={`categoryToggleBtn ${cat3 ? " showActiveFilter" : ""}`} onClick={ toggleCat3 } >Bébé</button>
+                    </li>
+                    <li className="dropdownListItem">
+                        <button className={`categoryToggleBtn ${cat4 ? " showActiveFilter" : ""}`} onClick={ toggleCat4 } >Famille</button>
+                    </li>
+                    <li className="dropdownListItem">
+                        <button className={`categoryToggleBtn ${cat5 ? " showActiveFilter" : ""}`} onClick={ toggleCat5 } >Grossesse</button>
+                    </li>
+                    <li className="dropdownListItem">
+                        <button className={`categoryToggleBtn ${cat6 ? " showActiveFilter" : ""}`} onClick={ toggleCat6 } >Couple</button>
+                    </li>
+
+                </ul>
+
+            </div>
+
             <section className="gallery">
 
-                {pics.map(pic => {
-                    return (
-                        <img src={pic}
-                        className="pics"
-                        alt="photo"
-                        title={`photo`}
-                        />
-                    )
-                })}
-            
+                {  populateGalery() }
 
             </section>
 
