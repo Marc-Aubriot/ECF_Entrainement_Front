@@ -29,22 +29,26 @@ const Prestations = () => {
     ]
 
     return (
-        <main className="mainStyles">
+        <>
+            <main className="mainStyles">
 
-            <h1 className="sectionTitle">Tarifs et Prestations</h1>
+                <h1 className="sectionTitle">Tarifs et Prestations</h1>
 
-            <section className="prestations">
+                <section className="prestations">
 
-                {cards.map(card => {
-                    return (
-                        <Card title={card[0]} image={card[1]} price={card[2]} desc={card[3]} bgcolor={card[4]} />
-                    )
-                })}
+                    {cards.map(card => {
+                        return (
+                            <Card title={card[0]} image={card[1]} price={card[2]} desc={card[3]} bgcolor={card[4]} />
+                        )
+                    })}
 
-            </section>
+                </section>
 
+                
+            </main>
+            
             <Footer />
-        </main>
+        </>
     );
 }
 

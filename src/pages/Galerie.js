@@ -130,7 +130,7 @@ const Galerie = () => {
                 Object.keys(tempArray).map((item, i) => (
                     <img 
                         src={tempArray[item].photo}
-                        className="pics"
+                        className={`pics photo${i}`}
                         alt="photo de Charles Cantin"
                         title={`photo ${tempArray[item].title}`}
                     />
@@ -141,7 +141,7 @@ const Galerie = () => {
                 Object.keys(picsList).map((item, i) => (
                     <img 
                         src={picsList[item].photo}
-                        className="pics"
+                        className={`pics photo${i}`}
                         alt="photo de Charles Cantin"
                         title={`photo ${picsList[item].title}`}
                     />
@@ -151,47 +151,55 @@ const Galerie = () => {
     }
 
     return (
-        <main className="mainStyles">
-            <h1 className="sectionTitle">Galerie</h1>
+        <>
+            <main className="mainStyles">
 
-            <div className="dropdownContainer">
+                {/* titre de la page */}
+                <h1 className="sectionTitle">Galerie</h1>
 
-                <button className="dropdownToggle" onClick={handleToggle}>Filtre</button>
+                {/* Filtre avec menu Dropdown */}
+                <div className="dropdownContainer">
 
-                <ul className={`dropdownList ${dropdownOpen ? " showDropdown" : ""}`}>
+                    {/* Toggle du menu filtre */}
+                    <button className="dropdownToggle" onClick={handleToggle}>Filtre</button>
 
-                    <li className="dropdownListItem">
-                        <button className={`categoryToggleBtn ${cat1 ? " showActiveFilter" : ""}`} onClick={ toggleCat1 } >Bâptème</button>
-                    </li>
-                    <li className="dropdownListItem">
-                        <button className={`categoryToggleBtn ${cat2 ? " showActiveFilter" : ""}`} onClick={ toggleCat2 } >Mariage</button>
-                    </li>
-                    <li className="dropdownListItem">
-                        <button className={`categoryToggleBtn ${cat3 ? " showActiveFilter" : ""}`} onClick={ toggleCat3 } >Bébé</button>
-                    </li>
-                    <li className="dropdownListItem">
-                        <button className={`categoryToggleBtn ${cat4 ? " showActiveFilter" : ""}`} onClick={ toggleCat4 } >Famille</button>
-                    </li>
-                    <li className="dropdownListItem">
-                        <button className={`categoryToggleBtn ${cat5 ? " showActiveFilter" : ""}`} onClick={ toggleCat5 } >Grossesse</button>
-                    </li>
-                    <li className="dropdownListItem">
-                        <button className={`categoryToggleBtn ${cat6 ? " showActiveFilter" : ""}`} onClick={ toggleCat6 } >Couple</button>
-                    </li>
+                    {/* menu filtre */}
+                    <ul className={`dropdownList ${dropdownOpen ? " showDropdown" : ""}`}>
 
-                </ul>
+                        <li className="dropdownListItem">
+                            <button className={`categoryToggleBtn ${cat1 ? " showActiveFilter" : ""}`} onClick={ toggleCat1 } >Bâptème</button>
+                        </li>
+                        <li className="dropdownListItem">
+                            <button className={`categoryToggleBtn ${cat2 ? " showActiveFilter" : ""}`} onClick={ toggleCat2 } >Mariage</button>
+                        </li>
+                        <li className="dropdownListItem">
+                            <button className={`categoryToggleBtn ${cat3 ? " showActiveFilter" : ""}`} onClick={ toggleCat3 } >Bébé</button>
+                        </li>
+                        <li className="dropdownListItem">
+                            <button className={`categoryToggleBtn ${cat4 ? " showActiveFilter" : ""}`} onClick={ toggleCat4 } >Famille</button>
+                        </li>
+                        <li className="dropdownListItem">
+                            <button className={`categoryToggleBtn ${cat5 ? " showActiveFilter" : ""}`} onClick={ toggleCat5 } >Grossesse</button>
+                        </li>
+                        <li className="dropdownListItem">
+                            <button className={`categoryToggleBtn ${cat6 ? " showActiveFilter" : ""}`} onClick={ toggleCat6 } >Couple</button>
+                        </li>
 
-            </div>
+                    </ul>
 
-            <section className="gallery">
+                </div>
 
-                {  populateGalery() }
+                {/* galerie photo */}
+                <section className="gallery">
 
-            </section>
+                    {  populateGalery() }
+
+                </section>
+
+            </main>
 
             <Footer />
-
-        </main>
+        </>
     );
 }
 

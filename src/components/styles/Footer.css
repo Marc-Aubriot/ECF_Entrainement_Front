@@ -1,11 +1,17 @@
 .footerStyles {
+    justify-content: center;
     display: flex;
     background-color: #47555E;
     overflow: hidden;
 }
 
 .copyrightsText {
+    align-self: center;
     font-family: 'Roboto', sans-serif;
     color: #EEEEEE;
-    padding-top: 3vh;
+}
+
+/* tablet & desktop */
+@media (min-width: 700px) {
+    
 }

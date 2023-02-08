@@ -5,6 +5,7 @@ html, body, main, section {
 
 .mainStyles {
     background-color: #EEEEEE;
+    min-height: 75vh;
 }
 
 .sectionTitle {

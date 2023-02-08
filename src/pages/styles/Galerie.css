@@ -10,25 +10,31 @@
 
     width: 325px;
     height: 200px;
-    margin-bottom: 2vh;
+    margin: 1vh;
 }
 
 /* Filtre dropdown menu */
 .dropdownContainer {
     height: fit-content;
     width: fit-content;
+    text-align: center;
+    margin-left: 65vw;
 }
 .dropdownToggle {
-    width: 100%;
+    font-size: 24px;
+    width: 100px;
     border: none;
-    border-radius: 15%;
+    border-radius: 35px;
+    background-color: white;
+    margin-bottom: 1vh;
 }
 .dropdownList {
     list-style: none;
     margin: 0;
     padding: 1vw 2vw 1vw 2vw;
+    border-radius: 50px;
     display: none;
-    background-color: aqua;
+    background-color: white;
 }
 /*.dropdownListItem {
 
@@ -45,5 +51,57 @@
     font-family: 'Roboto', sans-serif;
 }
 .showActiveFilter {
-    background-color: green;
+    background-color: rgba(148, 146, 146, 0.5);
+    border-radius: 30px;
+    width: 150px;
+}
+
+/*arrangement galerie*/
+/* tablet */
+@media (min-width: 800px) {
+    .dropdownContainer {
+        margin-left: 80vw;
+    }
+
+    .photo0, .photo4, .photo8{
+        margin-left: 4vw;
+    }
+
+    .photo2, .photo6, .photo10 {
+        margin-left: 14vw;
+    }
+}
+
+/* desktop */
+@media (min-width: 1200px) {
+    .photo0, .photo4, .photo8, .photo2, .photo6, .photo10 {
+        margin-left: 1vh;
+    }
+
+    .photo0, .photo6 {
+        margin-left: 4vw;
+    }
+
+    .photo3, .photo9 {
+        margin-left: 14vw;
+    }
+}
+
+/* very large screen */
+@media (min-width: 1600px) {
+    .gallery {
+        min-width: 1650px;
+        max-width: 1800px;
+    }
+    .photo0, .photo4, .photo8, .photo2, .photo6, .photo10, .photo0, .photo6, .photo3, .photo9 {
+        margin-left: 1vh;
+    }
+
+    .photo0, .photo8 {
+        margin-left: 5%;
+    }
+
+    .photo4 {
+        margin-left: 15%;
+    }
 }
