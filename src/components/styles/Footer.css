@@ -3,10 +3,29 @@
     display: flex;
     background-color: #47555E;
     overflow: hidden;
+    height: 8vh;
 }
 
 .copyrightsText {
     align-self: center;
     font-family: 'Roboto', sans-serif;
     color: #EEEEEE;
+}
+
+.logoWrapperBottom {
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+.logoImgBottom {
+    position: relative;
+    top: -4vh;
+    object-fit: cover;
+    overflow: hidden;
+    height: 15vh;
+    width: auto;
 }
