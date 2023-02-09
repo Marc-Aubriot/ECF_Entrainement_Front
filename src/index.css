@@ -5,8 +5,8 @@ html, body, main, section {
 
 .mainStyles {
     background-color: #EEEEEE;
-    min-height: 77vh;
     overflow: hidden;
+    min-height: 82vh;
 }
 
 .sectionTitle {

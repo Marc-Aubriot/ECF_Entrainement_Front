@@ -49,10 +49,22 @@
 .submitBtn {
     font-family: 'Roboto', sans-serif;
     background-color: rgb(49, 131, 255);
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
     color: white;
-    margin-left: 33%;
     width: 33%;
     height: 5%;
+    transition: font-size 0.2s;
+    transition: width 0.2s;
+    transition: background-color 0.2s;
+    transition: color 0.2s;
+}
+.submitBtn:hover {
+    font-size: 24px;
+    width: 28%;
+    background-color: white;
+    color: rgb(49, 131, 255);
 }
 
 /* tablet */
