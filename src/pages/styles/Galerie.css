@@ -12,6 +12,7 @@
 }
 .pics:hover {
     cursor: zoom-in;
+    border: 2px solid rgba(36, 189, 209, 0.5);
 }
 
 /* fonction zoom */
@@ -53,6 +54,7 @@
 }
 .dropdownToggle:hover {
     cursor: pointer;
+    border: 2px solid rgba(36, 189, 209, 0.5);
 }
 .dropdownList {
     list-style: none;
@@ -75,6 +77,11 @@
     width: 100%;
     font-size: 24px;
     font-family: 'Roboto', sans-serif;
+}
+.categoryToggleBtn:hover {
+    border-radius: 15px;
+    cursor: pointer;
+    border: 2px solid rgba(36, 189, 209, 0.5);
 }
 .showActiveFilter {
     background-color: rgba(148, 146, 146, 0.5);

@@ -71,9 +71,9 @@ const Nav = () => {
                         <li key={link.id} className="list">
                             <NavLink 
                                 to={link.path} 
-                                activeClassName="active-link" 
+                                //activeClasName="active-link" 
                                 onClick={ () => closeMenu() } 
-                                exact
+                                //exact
                                 >
                                     {link.text}
                                 </NavLink>

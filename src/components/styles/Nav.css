@@ -50,7 +50,12 @@
 /* link anchor */
 a { 
     color: #EEEEEE; 
+    transition: font-size 0.25s;
 }
+a:hover {
+    font-size: 1.2em;
+}
+
 
 a:link, a:visited, a:hover, a:active { 
     text-decoration: none; 

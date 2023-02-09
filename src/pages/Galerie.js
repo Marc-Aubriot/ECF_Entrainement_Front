@@ -130,6 +130,7 @@ const Galerie = () => {
                     <img 
                         src={tempArray[item].photo}
                         className={`pics photo${i}`}
+                        key={i}
                         id={i}
                         alt="Charles Cantin"
                         title={`photo ${tempArray[item].title}`}
@@ -143,6 +144,7 @@ const Galerie = () => {
                     <img 
                         src={picsList[item].photo}
                         className={`pics photo${i}`}
+                        key={i}
                         id={i}
                         alt="Charles Cantin"
                         title={`photo ${picsList[item].title}`}

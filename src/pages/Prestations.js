@@ -36,9 +36,9 @@ const Prestations = () => {
 
                 <section className="prestations">
 
-                    {cards.map(card => {
+                    {cards.map((card,index) => {
                         return (
-                            <Card title={card[0]} image={card[1]} price={card[2]} desc={card[3]} bgcolor={card[4]} />
+                            <Card title={card[0]} image={card[1]} price={card[2]} desc={card[3]} bgcolor={card[4]} key={index} />
                         )
                     })}
 
