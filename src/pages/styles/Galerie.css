@@ -4,13 +4,36 @@
 }
 
 .pics {
-    /* crop the image */
     overflow: hidden;
     object-fit: cover;
-
     width: 325px;
     height: 200px;
     margin: 1vh;
+}
+.pics:hover {
+    cursor: zoom-in;
+}
+
+/* fonction zoom */
+.enlargePic {
+    position: fixed;
+    overflow: auto;
+    object-fit: contain;
+    z-index: 11;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.blackBg {
+    position: fixed;
+    background-color: black;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 /* Filtre dropdown menu */
@@ -27,6 +50,9 @@
     border-radius: 35px;
     background-color: white;
     margin-bottom: 1vh;
+}
+.dropdownToggle:hover {
+    cursor: pointer;
 }
 .dropdownList {
     list-style: none;

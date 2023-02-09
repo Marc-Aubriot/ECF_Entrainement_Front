@@ -90,9 +90,8 @@ const Galerie = () => {
     /* dropdown hooks */
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const handleToggle = () => { setDropdownOpen(prev => !prev) }
-    //const closeDropdown = () => { setDropdownOpen(false) }
 
-    /* category + hooks */
+    /* category hooks */
     const [cat1, setFilterCat1] = useState(false)
     const toggleCat1 = () => { setFilterCat1(prev => !prev) }
 
@@ -131,8 +130,10 @@ const Galerie = () => {
                     <img 
                         src={tempArray[item].photo}
                         className={`pics photo${i}`}
-                        alt="photo de Charles Cantin"
+                        id={i}
+                        alt="Charles Cantin"
                         title={`photo ${tempArray[item].title}`}
+                        onClick={enlargePic}
                     />
                 ))
             ) 
@@ -142,12 +143,33 @@ const Galerie = () => {
                     <img 
                         src={picsList[item].photo}
                         className={`pics photo${i}`}
-                        alt="photo de Charles Cantin"
+                        id={i}
+                        alt="Charles Cantin"
                         title={`photo ${picsList[item].title}`}
+                        onClick={enlargePic}
                     />
                 ))
             ) 
         }
+    }
+
+    /* élargie la photo quand on clique dessus et la met au premier plan */
+    function enlargePic(e) {
+        const dummyPhoto = document.getElementById(e.target.id);
+
+        if ( e.target.className === `pics enlargePic` ) { 
+            const deleteBlackBg = document.getElementById('blackBg');
+            dummyPhoto.className = `pics photo${e.target.id}`;
+            deleteBlackBg.remove();
+            return; 
+        }
+        
+        const targetToAppend = document.getElementById('root');
+        const blackBg = document.createElement('div');
+        blackBg.className = 'blackBg' ;
+        blackBg.id = 'blackBg';
+        targetToAppend.appendChild(blackBg);
+        e.target.className = `pics enlargePic`;  
     }
 
     return (
@@ -190,7 +212,7 @@ const Galerie = () => {
                 </div>
 
                 {/* galerie photo */}
-                <section className="gallery">
+                <section className="gallery" id="gallery">
 
                     {  populateGalery() }
 
