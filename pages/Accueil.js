@@ -3,12 +3,14 @@ import React from "react";
 
 /* imports composants */
 import Header from "./components/Header.js";
+import Meta from "./components/Meta.js";
 
 /* Page Accueil */
 const Accueil = () => {
     
     return (
         <>
+            <Meta />
             <Header />
         
             <main className="mainStyles">

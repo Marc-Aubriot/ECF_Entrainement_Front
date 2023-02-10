@@ -4,12 +4,14 @@ import React from "react";
 /* imports composants */
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Meta from "./components/Meta";
 
 /* Page Contact */
 const Contact = () => {
     
     return (
         <>
+            <Meta />
             <Header />
             
             <main className="mainStyles">

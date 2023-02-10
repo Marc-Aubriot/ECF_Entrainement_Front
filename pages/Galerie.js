@@ -4,6 +4,7 @@ import React, { useState } from "react";
 /* imports composants */
 import Footer from './components/Footer.js';
 import Header from "./components/Header.js";
+import Meta from "./components/Meta";
 
 /* Page Galerie */
 const Galerie = () => { 
@@ -161,6 +162,7 @@ const Galerie = () => {
 
     return (
         <>
+            <Meta />
             <Header />
 
             <main className="mainStyles">

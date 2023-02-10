@@ -5,6 +5,7 @@ import React from "react";
 import Footer from './components/Footer.js';
 import Card from './components/Card.js';
 import Header from "./components/Header.js";
+import Meta from "./components/Meta.js";
 
 /* Page Prestations */
 const Prestations = () => {
@@ -21,6 +22,7 @@ const Prestations = () => {
 
     return (
         <>
+            <Meta />
             <Header />
             
             <main className="mainStyles">
