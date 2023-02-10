@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-const Meta = () => {
+export default function Meta({ description, title, siteTitle }) {
   return (
     <>
       <Head>
@@ -34,11 +34,9 @@ const Meta = () => {
         <meta name="twitter:image" content="" />
 
         <link rel="icon" href="/favicon.ico" />
-        <title>Le site de Charles Cantin</title>
+        <title>{`${title} | ${siteTitle}`}</title>
       </Head>
 
     </>
   );
 }
-  
-export default Meta;

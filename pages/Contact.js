@@ -11,7 +11,7 @@ const Contact = () => {
     
     return (
         <>
-            <Meta />
+            <Meta title="Contact" siteTitle="Charles Cantin" />
             <Header />
             
             <main className="mainStyles">

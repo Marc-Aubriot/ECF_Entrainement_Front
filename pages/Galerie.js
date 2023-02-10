@@ -162,7 +162,7 @@ const Galerie = () => {
 
     return (
         <>
-            <Meta />
+            <Meta title="Galerie" siteTitle="Charles Cantin" />
             <Header />
 
             <main className="mainStyles">

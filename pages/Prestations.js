@@ -22,7 +22,7 @@ const Prestations = () => {
 
     return (
         <>
-            <Meta />
+            <Meta title="Prestations" siteTitle="Charles Cantin" />
             <Header />
             
             <main className="mainStyles">

@@ -10,7 +10,7 @@ const Accueil = () => {
     
     return (
         <>
-            <Meta />
+            <Meta title="Accueil" siteTitle="Charles Cantin" />
             <Header />
         
             <main className="mainStyles">
