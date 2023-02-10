@@ -72,18 +72,16 @@ const Nav = () => {
 
                 {/* Social Media List + Icons */}
                 <li className="socialMediaList">
-                    <a href="https://www.facebook.com/">
+                    <a href="https://www.facebook.com/" target="_blank" >
                         <img 
                             src="../ressources/facebook.svg"
                             className="socialMediaImg" 
-                            target="_blank" 
                         />
                     </a>
-                    <a href="https://www.instagram.com/">
+                    <a href="https://www.instagram.com/" target="_blank" >
                         <img 
                             src="../ressources/instagram.svg"
                             className="socialMediaImg" 
-                            target="_blank" 
                         />
                     </a>
                 </li>

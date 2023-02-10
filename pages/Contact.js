@@ -22,7 +22,7 @@ const Contact = () => {
                         <form className="formArea">
 
                             <label className="emailArea">
-                                <input type="email" name="email" className="emailInputArea" required/>
+                                <input type="email" name="email" className="emailInputArea" value="Email" required/>
                             </label>
                             
                             <textarea value="Message" className="formTextArea" required/>
