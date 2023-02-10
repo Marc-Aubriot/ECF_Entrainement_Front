@@ -1,87 +1,73 @@
 /* imports reacts */
 import React, { useState } from "react";
 
-/* imports composants et styles */
-import Footer from '../components/Footer.js';
-import './styles/Galerie.css';
+/* imports composants */
+import Footer from './components/Footer.js';
+import Header from "./components/Header.js";
+import Meta from "./components/Meta";
 
-/* imports ressources */
-import pic_0 from '../ressources/photos_galerie/famille1-desktop.jpg';
-import pic_1 from '../ressources/photos_galerie/bébé1-desktop.jpg';
-import pic_2 from '../ressources/photos_galerie/bapteme1-desktop.jpg';
-import pic_3 from '../ressources/photos_galerie/mariage1-desktop.jpg';
-import pic_4 from '../ressources/photos_galerie/grossesse1-desktop.jpg';
-import pic_5 from '../ressources/photos_galerie/couple1-desktop.jpg';
-import pic_6 from '../ressources/photos_galerie/bapteme2-desktop.jpg';
-import pic_7 from '../ressources/photos_galerie/bébé2-desktop.jpg';
-import pic_8 from '../ressources/photos_galerie/couple2-desktop.jpg';
-import pic_9 from '../ressources/photos_galerie/famille2-desktop.jpg';
-import pic_10 from '../ressources/photos_galerie/grossesse2-desktop.jpg';
-import pic_11 from '../ressources/photos_galerie/mariage2-desktop.jpg';
-
-
-/* composant: Page Galerie */
+/* Page Galerie */
 const Galerie = () => { 
 
     /* photo data */
     const picsList = [
         {
-            photo: pic_0,
+            photo: "./ressources/photos_galerie/famille1-desktop.jpg",
             categorie: "famille",
             title: "famille1",
         },
         {
-            photo: pic_1,
+            photo: "./ressources/photos_galerie/bébé1-desktop.jpg",
             categorie: "bébé",
             title: "bébé1",
         },
         {
-            photo: pic_2,
+            photo: "./ressources/photos_galerie/bapteme1-desktop.jpg",
             categorie: "bâptème",
             title: "bâptème1",
         },
         {
-            photo: pic_3,
+            photo: "./ressources/photos_galerie/mariage1-desktop.jpg",
             categorie: "mariage",
             title: "mariage1",
         },
         {
-            photo: pic_4,
+            photo: "./ressources/photos_galerie/grossesse1-desktop.jpg",
             categorie: "grossesse",
             title: "grossesse1",
         },
         {
-            photo: pic_5,
+            photo: "./ressources/photos_galerie/couple1-desktop.jpg",
             categorie: "couple",
             title: "couple1",
         },
         {
-            photo: pic_6,
+            photo: "./ressources/photos_galerie/bapteme2-desktop.jpg",
             categorie: "bâptème",
             title: "bâptème2",
         },
         {
-            photo: pic_7,
+            photo: "./ressources/photos_galerie/bébé2-desktop.jpg",
             categorie: "bébé",
             title: "bébé2",
         },
         {
-            photo: pic_8,
+            photo: "./ressources/photos_galerie/couple2-desktop.jpg",
             categorie: "couple",
             title: "couple2",
         },
         {
-            photo: pic_9,
+            photo: "./ressources/photos_galerie/famille2-desktop.jpg",
             categorie: "famille",
             title: "famille2",
         },
         {
-            photo: pic_10,
+            photo: "./ressources/photos_galerie/grossesse2-desktop.jpg",
             categorie: "grossesse",
             title: "grossesse2",
         },
         {
-            photo: pic_11,
+            photo: "./ressources/photos_galerie/mariage2-desktop.jpg",
             categorie: "mariage",
             title: "mariage2",
         },
@@ -166,7 +152,7 @@ const Galerie = () => {
             return; 
         }
         
-        const targetToAppend = document.getElementById('root');
+        const targetToAppend = document.getElementById('__next');
         const blackBg = document.createElement('div');
         blackBg.className = 'blackBg' ;
         blackBg.id = 'blackBg';
@@ -176,6 +162,9 @@ const Galerie = () => {
 
     return (
         <>
+            <Meta title="Galerie" siteTitle="Charles Cantin" />
+            <Header />
+
             <main className="mainStyles">
 
                 {/* titre de la page */}

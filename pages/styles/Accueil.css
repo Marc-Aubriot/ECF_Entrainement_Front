@@ -3,16 +3,14 @@
 }
 
 .heroTitle {
-    position: absolute;
+    position: relative;
+    text-align: center;
     font-family: 'Roboto', sans-serif;
     color: #EEEEEE;
     font-size: 42px;
-    width: 80vw;
-    margin-left: 5vw;
+    top: -60%;
+    width: 100%;
     -webkit-text-stroke: 0.9px black;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
 }
 
 .heroImg {
@@ -24,14 +22,12 @@
 /* tablet*/
 @media (min-width: 800px) {
     .heroTitle {
-        /*margin-left: 15vw;*/
         font-size: 50px;
     }
 }
 /* tablet landscape*/
 @media (min-width: 800px) and (orientation: landscape)  {
     .heroTitle {
-        margin-left: 15vw;
         font-size: 52px;
     }
 }
@@ -39,7 +35,6 @@
 /* large tablet */
 @media (min-width: 1250px) and (orientation: landscape) {
     .heroTitle {
-        margin-left: 25vw;
         font-size: 51px;
     }
 }
@@ -47,7 +42,6 @@
 /* desktop */
 @media (min-width: 1250px) {
     .heroTitle {
-        margin-left: 25vw;
         font-size: 51px;
     }
 }

@@ -1,16 +1,19 @@
 /* imports reacts */
 import React from "react";
 
-/* imports composants et styles */
-import Footer from "../components/Footer";
-import './styles/Contact.css';
+/* imports composants */
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Meta from "./components/Meta";
 
-
-/* composant: Page Contact */
+/* Page Contact */
 const Contact = () => {
     
     return (
         <>
+            <Meta title="Contact" siteTitle="Charles Cantin" />
+            <Header />
+            
             <main className="mainStyles">
                 <h1 className="sectionTitle">Contact</h1>
 
@@ -21,7 +24,7 @@ const Contact = () => {
                         <form className="formArea">
 
                             <label className="emailArea">
-                                <input type="email" name="email" className="emailInputArea" required/>
+                                <input type="email" name="email" className="emailInputArea" value="Email" required/>
                             </label>
                             
                             <textarea value="Message" className="formTextArea" required/>

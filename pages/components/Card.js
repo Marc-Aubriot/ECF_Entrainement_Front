@@ -1,10 +1,6 @@
 /* imports reacts */
 import React from "react";
 
-/* imports composants et styles */
-import './styles/Card.css';
-
-
 /* composant: Card des prestations */
 function Card(props) {
 
