@@ -2,7 +2,7 @@
 import React from "react";
 
 /* imports composants et styles */
-import './styles/Logo.css'
+//import './styles/Logo.css'
 
 /* imports ressources */
 import logoImg from '../ressources/logo avec fond.png';
@@ -15,7 +15,9 @@ const Logo = () => {
         <div className="logoWrapper">
 
             <img
-                src={logoImg}
+                //src={logoImg}
+                //srcSet="../ressources/logo avec fond.png"
+                src="../ressources/logo avec fond.png"
                 title="logo de Charles Cantin"
                 alt="logo du site"
                 className="logoImg"

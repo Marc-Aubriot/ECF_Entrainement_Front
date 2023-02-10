@@ -4,7 +4,7 @@ import React from 'react';
 /* imports composants et styles */
 import Logo from './Logo.js';
 import Nav from './Nav.js';
-import './styles/Header.css';
+//import './styles/Header.css';
 
 
 /* composant: Header */

@@ -2,8 +2,9 @@
 import React from "react";
 
 /* imports composants et styles */
-import Footer from "../components/Footer";
-import './styles/Contact.css';
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+//import './styles/Contact.css';
 
 
 /* composant: Page Contact */
@@ -11,6 +12,8 @@ const Contact = () => {
     
     return (
         <>
+            <Header />
+            
             <main className="mainStyles">
                 <h1 className="sectionTitle">Contact</h1>
 
