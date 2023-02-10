@@ -1,13 +1,11 @@
 /* imports reacts */
 import React from "react";
 
-/* imports composants et styles */
+/* imports composants */
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-//import './styles/Contact.css';
 
-
-/* composant: Page Contact */
+/* Page Contact */
 const Contact = () => {
     
     return (

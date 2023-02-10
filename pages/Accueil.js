@@ -1,15 +1,10 @@
 /* imports reacts */
 import React from "react";
 
-/* imports composants et styles */
-//import './styles/Accueil.css';
+/* imports composants */
 import Header from "./components/Header.js";
 
-/* imports ressources */
-import heroImg from './ressources/cover-dark-high.jpg';
-
-
-/* composant: Page Accueil */
+/* Page Accueil */
 const Accueil = () => {
     
     return (
@@ -20,7 +15,6 @@ const Accueil = () => {
                 <h1 className="heroTitle">Charles Cantin Photographe</h1>
                 <div className="heroImgWrapper">
                     <img
-                        //src={heroImg}
                         src="./ressources/cover-dark-high.jpg"
                         title="logo de Charles Cantin"
                         alt="logo du site"

@@ -1,22 +1,12 @@
 /* imports reacts */
 import React from "react";
 
-/* imports composants et styles */
+/* imports composants */
 import Footer from './components/Footer.js';
 import Card from './components/Card.js';
-//import './styles/Prestations.css';
-
-/* imports ressources */
-import pic_justemoi from './ressources/photo_presta/pourmoi-desktop.jpg';
-import pic_pourdeux from './ressources/photo_presta/pourdeux-desktop.jpg';
-import pic_famille from './ressources/photo_presta/famille-desktop.jpg';
-import pic_iletaitunefois from './ressources/photo_presta/iletaitunefois-desktop.jpg';
-import pic_monbebe from './ressources/photo_presta/monbebe-desktop.jpg';
-import pic_jimmortalise from './ressources/photo_presta/jimmortalise-desktop.jpg';
 import Header from "./components/Header.js";
 
-
-/* composant: Page Prestations */
+/* Page Prestations */
 const Prestations = () => {
 
     /* cards data */
