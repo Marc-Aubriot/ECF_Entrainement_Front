@@ -3,3 +3,8 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
   # This line should *not* be indented
 media_folder: "ressources/uploads" # Media files will be stored in the repo under images/uploads
+collections:
+  - name: "photos"
+    label: "Photos"
+    folder: "_photos"
+    create: true # Allow users to create new documents in this collection
