@@ -35,6 +35,7 @@ export default function Meta({ description, title, siteTitle }) {
 
         <link rel="icon" href="/favicon.ico" />
         <title>{`${title} | ${siteTitle}`}</title>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Head>
 
     </>
