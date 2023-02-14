@@ -6,13 +6,12 @@ import Footer from './components/Footer.js';
 import Header from "./components/Header.js";
 import Meta from "./components/Meta.js";
 //import filesToLoad from "../public/ressources/filesToLoad.json";
-//import file1 from "../public/ressources/piclist.json";
+import file1 from "../public/ressources/piclist.json";
 
 /* Page Galerie */
 const Galerie = () => { 
 
     const picsList = file1.picList;
-    const json = async () => { return import('../public/ressources/piclist.json'); }
 
     /* dropdown hooks */
     const [dropdownOpen, setDropdownOpen] = useState(false);
