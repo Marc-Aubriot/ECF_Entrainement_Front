@@ -1,77 +1,18 @@
 /* imports reacts */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 /* imports composants */
 import Footer from './components/Footer.js';
 import Header from "./components/Header.js";
-import Meta from "./components/Meta";
+import Meta from "./components/Meta.js";
+//import filesToLoad from "../public/ressources/filesToLoad.json";
+import file1 from "../public/ressources/piclist.json";
 
 /* Page Galerie */
 const Galerie = () => { 
 
-    /* photo data */
-    const picsList = [
-        {
-            photo: "./ressources/photos_galerie/famille1-desktop.jpg",
-            categorie: "famille",
-            title: "famille1",
-        },
-        {
-            photo: "./ressources/photos_galerie/bébé1-desktop.jpg",
-            categorie: "bébé",
-            title: "bébé1",
-        },
-        {
-            photo: "./ressources/photos_galerie/bapteme1-desktop.jpg",
-            categorie: "bâptème",
-            title: "bâptème1",
-        },
-        {
-            photo: "./ressources/photos_galerie/mariage1-desktop.jpg",
-            categorie: "mariage",
-            title: "mariage1",
-        },
-        {
-            photo: "./ressources/photos_galerie/grossesse1-desktop.jpg",
-            categorie: "grossesse",
-            title: "grossesse1",
-        },
-        {
-            photo: "./ressources/photos_galerie/couple1-desktop.jpg",
-            categorie: "couple",
-            title: "couple1",
-        },
-        {
-            photo: "./ressources/photos_galerie/bapteme2-desktop.jpg",
-            categorie: "bâptème",
-            title: "bâptème2",
-        },
-        {
-            photo: "./ressources/photos_galerie/bébé2-desktop.jpg",
-            categorie: "bébé",
-            title: "bébé2",
-        },
-        {
-            photo: "./ressources/photos_galerie/couple2-desktop.jpg",
-            categorie: "couple",
-            title: "couple2",
-        },
-        {
-            photo: "./ressources/photos_galerie/famille2-desktop.jpg",
-            categorie: "famille",
-            title: "famille2",
-        },
-        {
-            photo: "./ressources/photos_galerie/grossesse2-desktop.jpg",
-            categorie: "grossesse",
-            title: "grossesse2",
-        },
-        {
-            photo: "./ressources/photos_galerie/mariage2-desktop.jpg",
-            categorie: "mariage",
-            title: "mariage2",
-        },
-    ];
+    const picsList = file1.picList;
+    const json = async () => { return import('../public/ressources/piclist.json'); }
 
     /* dropdown hooks */
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -96,8 +37,17 @@ const Galerie = () => {
     const [cat6, setFilterCat6] = useState(false)
     const toggleCat6 = () => { setFilterCat6(prev => !prev) }
 
+    /* to keep the "wall style" of galery, give photo style class ( photo 0, 1, 2, 3, ... 11 ) then return at the beginning */
+    function styleRepartition(number) {
+        let numberCheck = number / 12;
+        if ( numberCheck >= 1 ) { 
+            return number % 12;
+        } else { return number }
+    }
+
     /* rempli la galerie avec les images, prend en compte le choix des filtres */
     function populateGalery() {
+
         if ( cat1 === true || cat2 === true || cat3 === true || cat4 === true || cat5 === true || cat6 === true ) {
 
             //créer un array photo copiant l'original et filtrant uniquement les catégories sélectionnées
@@ -115,7 +65,7 @@ const Galerie = () => {
                 Object.keys(tempArray).map((item, i) => (
                     <img 
                         src={tempArray[item].photo}
-                        className={`pics photo${i}`}
+                        className={`pics photo${styleRepartition(i)}`}
                         key={i}
                         id={i}
                         alt="Charles Cantin"
@@ -125,17 +75,18 @@ const Galerie = () => {
                 ))
             ) 
         } else { //retourne tout l'array photo
+
             return (
                 Object.keys(picsList).map((item, i) => (
                     <img 
                         src={picsList[item].photo}
-                        className={`pics photo${i}`}
+                        className={`pics photo${styleRepartition(i)}`}
                         key={i}
                         id={i}
                         alt="Charles Cantin"
                         title={`photo ${picsList[item].title}`}
                         onClick={enlargePic}
-                    />
+                    /> 
                 ))
             ) 
         }
@@ -205,7 +156,7 @@ const Galerie = () => {
                 {/* galerie photo */}
                 <section className="gallery" id="gallery">
 
-                    {  populateGalery() }
+                { populateGalery() }
 
                 </section>
 

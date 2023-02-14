@@ -1,10 +1,30 @@
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  branch: netlify_config # Branch to update (optional; defaults to master)
   # This line should *not* be indented
-media_folder: "ressources/uploads" # Media files will be stored in the repo under images/uploads
+media_folder: "public/ressources/uploads" # Media files will be stored in the repo under images/uploads
+public_folder: "ressources/uploads"
 collections:
-  - name: "photos"
-    label: "Photos"
-    folder: "_photos"
-    create: true # Allow users to create new documents in this collection
+  - label: "Galerie de photo"
+    name: "gallery"
+    folder: "public/ressources"
+    summary: "{{title}}"
+    slug: "{{title}}"
+    extension: "json"
+    create: true
+    fields:
+      - {label: "title", name: "title", widget: "string"}
+      - label: "Photos >"
+        name: "picList"
+        summary: "{{title}}"
+        widget: "list"
+        fields:
+          - {label: "Photographie", name: "photo", widget: "image", choose_url: false}
+          - {label: "Titre de la photo", name: "title", widget: "string"}
+          - label: "Catégorie de la photo"
+            name: "categorie"
+            widget: "select"
+            options: ["bâptème", "mariage", "bébé", "famille", "grossesse", "couple"]
+        media_library:
+          config:
+            multiple: true
