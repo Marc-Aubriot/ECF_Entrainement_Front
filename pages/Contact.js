@@ -23,11 +23,13 @@ const Contact = () => {
                             
                         <form name="contact" className="formArea" netlify>
 
+                            
                             <label className="emailArea">
-                                <input type="email" name="email" className="emailInputArea" value="Email" required/>
+                                <input type="email" name="email" className="emailInputArea" placeholder="email" required/>
                             </label>
                             
-                            <textarea value="Message" className="formTextArea" required/>
+                            
+                            <textarea placeholder="message" className="formTextArea" required> </textarea>
 
                             <button type="submit" className="submitBtn">Envoyer </button>
 
