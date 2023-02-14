@@ -97,17 +97,28 @@ const Galerie = () => {
 
         if ( e.target.className === `pics enlargePic` ) { 
             const deleteBlackBg = document.getElementById('blackBg');
+            const deleteBlackBgCloseBtn = document.getElementById('blackBgCloseBtn');
             dummyPhoto.className = `pics photo${e.target.id}`;
+            deleteBlackBgCloseBtn.remove();
             deleteBlackBg.remove();
             return; 
         }
         
         const targetToAppend = document.getElementById('__next');
         const blackBg = document.createElement('div');
+        const closeBtn = document.createElement('img');
+
         blackBg.className = 'blackBg' ;
         blackBg.id = 'blackBg';
+        closeBtn.className = 'closeBtn' ;
+        closeBtn.src = '../ressources/x.svg';
+        closeBtn.id = 'blackBgCloseBtn';
+        closeBtn.onClick = () => { enlargePic(e); }
+
         targetToAppend.appendChild(blackBg);
+        blackBg.appendChild(closeBtn);
         e.target.className = `pics enlargePic`;  
+
     }
 
     return (

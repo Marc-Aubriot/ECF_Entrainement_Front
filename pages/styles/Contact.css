@@ -4,6 +4,7 @@
     border-radius: 5px;
     height: 59vh;
     width: 300px;
+    min-height: 540px;
     background-color: #44645C;
     margin: 0 auto;
     margin-top: 1vh;

@@ -1,5 +1,6 @@
 .heroImgWrapper {
     height: 90vh;
+    min-height: 750px;
 }
 
 .heroTitle {

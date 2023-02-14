@@ -36,6 +36,15 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    min-height: 700px;
+}
+.closeBtn {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    filter: invert(99%) sepia(3%) saturate(909%) hue-rotate(196deg) brightness(116%) contrast(87%);
 }
 
 /* Filtre dropdown menu */
@@ -60,6 +69,7 @@
     background-color: rgba(36, 189, 209, 0.5);
 }
 .dropdownList {
+    margin-right: 1vw;
     list-style: none;
     margin: 0;
     padding: 1vw 2vw 1vw 2vw;

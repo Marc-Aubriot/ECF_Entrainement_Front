@@ -21,7 +21,7 @@ const Contact = () => {
 
                     <div className="formWrapper">
                             
-                        <form className="formArea">
+                        <form name="contact" className="formArea" netlify>
 
                             <label className="emailArea">
                                 <input type="email" name="email" className="emailInputArea" value="Email" required/>
