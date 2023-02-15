@@ -21,15 +21,16 @@ const Contact = () => {
 
                     <div className="formWrapper">
                             
-                        <form name="contact" className="formArea" netlify>
+                        <form name="contact" method="POST" className="formArea" action="https://formspree.io/f/xknajlvp">
 
-                            
+                                    
                             <label className="emailArea">
                                 <input type="email" name="email" className="emailInputArea" placeholder="email" required/>
                             </label>
                             
-                            
-                            <textarea placeholder="message" className="formTextArea" required> </textarea>
+                            <label>
+                                <textarea name="message" placeholder="message" className="formTextArea" required> </textarea>
+                            </label>
 
                             <button type="submit" className="submitBtn">Envoyer </button>
 
